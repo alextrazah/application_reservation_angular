@@ -1,0 +1,44 @@
+{
+  "categories": [
+    {
+      "id": "2",
+      "nom": "foot",
+      "type": "borjini"
+    },
+    {
+      "id": "5",
+      "nom": "cinema",
+      "type": "ridha"
+    }
+
+  ],
+
+  "events": [
+    {
+      "id": "8",
+      "nom": "syrine",
+      "categorie": "foot"
+    },
+    {
+      "id": "8",
+      "nom": "syrine",
+      "categorie": "foot"
+    },
+    {
+      "id": "8",
+      "nom": "syrine",
+      "categorie": "foot"
+    },
+    {
+      "id": "8",
+      "nom": "syrine",
+      "categorie": "foot"
+    },
+    {
+      "id": "10",
+      "nom": "khalil",
+      "categorie": "cinema"
+    }
+
+  ]
+}

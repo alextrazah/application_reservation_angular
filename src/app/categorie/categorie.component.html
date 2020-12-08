@@ -1,0 +1,17 @@
+<div>
+<br>
+<br>
+<br>
+
+  <h1 class="my-4">Shop Name</h1>
+ <div *ngFor="let b of Categories">
+    <ul class="list-group">
+      <a class="list-group-item d-flex justify-content-between align-items-center">
+        {{b.nom}}
+        <span class="badge badge-primary badge-pill">14</span>
+      </a>
+      <button (click)="clickon(b.nom)">buy</button>
+    </ul>
+
+ </div>
+</div>
