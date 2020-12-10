@@ -9,10 +9,18 @@
       "id": "5",
       "nom": "cinema",
       "type": "ridha"
+    },
+    {
+      "id": "4Yq2nPM",
+      "nom": "ops",
+      "type": "ops"
+    },
+    {
+      "id": "2V1PI2J",
+      "nom": "zz",
+      "type": "aa"
     }
-
   ],
-
   "events": [
     {
       "id": "8",
@@ -35,10 +43,76 @@
       "categorie": "foot"
     },
     {
-      "id": "10",
-      "nom": "khalil",
+      "id": "DGgp2zC",
+      "nom": "sss",
+      "date": "2020-12-09T23:00:00.000Z",
+      "places": "7",
+      "description": "sssss",
+      "image": "",
+      "categorie": "foot"
+    },
+    {
+      "id": "F5EfciA",
+      "nom": "sss",
+      "date": "2020-12-03T23:00:00.000Z",
+      "places": "4",
+      "description": "cfgfg",
+      "image": "C:\\fakepath\\2020-06-19 at 13-33-33.png",
+      "categorie": "foot"
+    },
+    {
+      "id": "RY90oOA",
+      "nom": "gggggggggggggggggg",
+      "date": "2020-12-17T23:00:00.000Z",
+      "places": "55",
+      "description": "zzz",
+      "image": "C:\\fakepath\\2020-06-19 at 13-33-46.png",
+      "categorie": "foot"
+    },
+    {
+      "id": "tTNqVWX",
+      "nom": "cine",
+      "date": "2020-12-15T23:00:00.000Z",
+      "places": "8",
+      "description": "jjjj",
+      "image": "",
       "categorie": "cinema"
+    },
+    {
+      "id": "Drh2oHX",
+      "nom": "gggeeee",
+      "date": "2020-12-09T23:00:00.000Z",
+      "places": "88",
+      "description": "eee",
+      "image": "",
+      "categorie": "cinema"
+    },
+    {
+      "id": "yO5lvhd",
+      "nom": "eeeee",
+      "date": "2020-12-15T23:00:00.000Z",
+      "places": "55",
+      "description": "zz",
+      "image": "",
+      "categorie": "cinema"
+    },
+    {
+      "id": "N26BpAT",
+      "nom": "rrr",
+      "date": "2020-12-15T23:00:00.000Z",
+      "places": "41",
+      "description": "aeazeazeaz",
+      "image": "",
+      "categorie": "cinema"
+    },
+    {
+      "id": "av2Yfoi",
+      "nom": "kk",
+      "date": "2020-12-15T23:00:00.000Z",
+      "places": "8",
+      "description": "8",
+      "image": "",
+      "categorie": "ops"
     }
-
   ]
 }

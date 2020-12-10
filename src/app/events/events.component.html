@@ -1,20 +1,21 @@
-<div class="row">
-<div *ngFor="let b of events" class=" col-md-6 mb-4">
-<div *ngIf="(b.categorie == event_type)">
-  <div class="card h-100" >
-    <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-    <div class="card-body">
-      <h4 class="card-title">
-        <a href="#">{{b.nom}}</a>
-      </h4>
-      <h5>{{type_e}}</h5>
-      <p class="card-text">{{b.categorie}}</p>
+<div *ngFor="let b of events" class="card">
+  <div *ngIf="(b.categorie == event_type)" class="row no-gutters">
+    <div class="col-auto">
+      <img src="//placehold.it/280" class="img-fluid" alt="">
     </div>
-    <div class="card-footer">
-      <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+    <div class="col">
+      <div class="card-block px-2">
+        <br>
+        <h1 class="card-title">{{b.nom}}</h1>
+        <h4 class="card-text">{{b.description}}</h4>
+        <h3 >{{b.date}}</h3>
+        <a href="#" class="btn btn-primary">BUTTON</a>
+      </div>
+    </div>
+    <div class="card-footer w-100 text-muted">
+      Footer stating cats are CUTE little animals
     </div>
   </div>
-  </div>
-</div>
+
 </div>
 
