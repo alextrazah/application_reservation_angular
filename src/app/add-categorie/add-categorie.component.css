@@ -1,0 +1,31 @@
+.example-form {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 150px;
+  max-width: 500px;
+  padding:20px;
+  box-shadow: 0 0 2px 1px darkcyan;
+
+
+}
+.example-full-width {
+  width: 100%;
+}
+
+#importer {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+#importer:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+button{
+  background-color: darkcyan;
+  color: #dddddd;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

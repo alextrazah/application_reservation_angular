@@ -1,0 +1,63 @@
+<br>
+<form [formGroup]="myForm" (ngSubmit)=" eventservice.submit(myForm.value) " class="example-form" >
+
+
+  <mat-form-field class="example-full-width" >
+    <input  matInput placeholder="nom" formControlName="nom">
+    <mat-error *ngIf="nom.invalid" >
+      Veuillez saisir votre nom
+    </mat-error>
+  </mat-form-field>
+
+
+  <br>
+
+
+
+  <mat-form-field class="example-full-width" >
+
+    <mat-label>Date</mat-label>
+    <input matInput [matDatepicker]="picker" formControlName="date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+    <mat-error *ngIf="date.invalid" >
+      Veuillez choisir une date
+    </mat-error>
+  </mat-form-field>
+
+
+  <br>
+
+  <br>
+  <mat-label>Categorie</mat-label>
+    <select mat-select placeholder="categorie" formControlName="categorie" class="browser-default custom-select" >
+      <option *ngFor="let b of Categories" value={{b.nom}}  >{{b.nom}}</option>
+    </select>
+  <br>
+  <br>
+  <mat-form-field class="example-full-width">
+    <input  matInput placeholder="places" formControlName="places">
+    <mat-error *ngIf="places.invalid" >
+      Veuillez saisir le type
+    </mat-error>
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width" >
+    <textarea matInput  placeholder="description" style="height:200px"formControlName="description"></textarea>
+    <mat-error *ngIf="description.invalid" >
+      Veuillez saisir la description
+    </mat-error>
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width">
+    <input disabled matInput  >
+    <input
+      *ngIf="!profilePicture" type="file"
+      (change)="handleProfilePictureInput($event.target.files)" formControlName="image">
+    <img id="importer" class="profile-picture" [src]="profilePicture">
+
+  </mat-form-field>
+
+  <br><br>
+  <button type="submit"  mat-raised-button >Ajouter un évenemment</button>
+</form>

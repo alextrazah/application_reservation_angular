@@ -1,0 +1,24 @@
+
+<br>
+<form [formGroup]="myForm" (ngSubmit)=" Categorieservice.submit(myForm.value) " class="example-form" >
+
+
+  <mat-form-field class="example-full-width" >
+    <input  matInput placeholder="nom" formControlName="nom">
+    <mat-error *ngIf="nom.invalid" >
+      Veuillez saisir votre nom
+    </mat-error>
+  </mat-form-field>
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <input  matInput placeholder="type" formControlName="type">
+    <mat-error *ngIf="type.invalid" >
+      Veuillez saisir le titre
+    </mat-error>
+  </mat-form-field>
+
+
+  <br><br>
+  <button type="submit"  mat-raised-button >Ajouter Categorie</button>
+</form>
