@@ -25,6 +25,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavComponent } from './nav/nav.component';
 import { AddEventComponent } from './add-event/add-event.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashCatComponent } from './dash-cat/dash-cat.component';
+import { DashEventComponent } from './dash-event/dash-event.component';
+import { UpdateEventComponent } from './update-event/update-event.component';
+import { UpdateCategorieComponent } from './update-categorie/update-categorie.component';
+import { UserComponent } from './user/user.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +41,12 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AddCategorieComponent,
     NavComponent,
     AddEventComponent,
-    DashboardComponent
+    DashboardComponent,
+    DashCatComponent,
+    DashEventComponent,
+    UpdateEventComponent,
+    UpdateCategorieComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
@@ -56,6 +66,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MatDatepickerModule,
     BrowserAnimationsModule,
     MatNativeDateModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,116 +3,47 @@
     {
       "id": "2",
       "nom": "foot",
-      "type": "borjini"
+      "type": "Sport"
     },
     {
       "id": "5",
       "nom": "cinema",
-      "type": "ridha"
+      "type": "Education"
     },
     {
-      "id": "4Yq2nPM",
-      "nom": "ops",
-      "type": "ops"
-    },
-    {
-      "id": "2V1PI2J",
-      "nom": "zz",
-      "type": "aa"
+      "id": "a6i4PaK",
+      "nom": "nounou",
+      "type": "Education"
     }
   ],
   "events": [
     {
-      "id": "8",
-      "nom": "syrine",
-      "categorie": "foot"
-    },
-    {
-      "id": "8",
-      "nom": "syrine",
-      "categorie": "foot"
-    },
-    {
-      "id": "8",
-      "nom": "syrine",
-      "categorie": "foot"
-    },
-    {
-      "id": "8",
-      "nom": "syrine",
-      "categorie": "foot"
-    },
-    {
-      "id": "DGgp2zC",
-      "nom": "sss",
+      "id": "sqhOnRG",
+      "nom": "fdfsd",
       "date": "2020-12-09T23:00:00.000Z",
-      "places": "7",
-      "description": "sssss",
-      "image": "",
+      "places": "22",
+      "description": "gggg",
+      "image": "C:\\fakepath\\affichepieuvre.jpg",
       "categorie": "foot"
     },
     {
-      "id": "F5EfciA",
-      "nom": "sss",
-      "date": "2020-12-03T23:00:00.000Z",
-      "places": "4",
-      "description": "cfgfg",
-      "image": "C:\\fakepath\\2020-06-19 at 13-33-33.png",
-      "categorie": "foot"
-    },
-    {
-      "id": "RY90oOA",
-      "nom": "gggggggggggggggggg",
-      "date": "2020-12-17T23:00:00.000Z",
-      "places": "55",
-      "description": "zzz",
-      "image": "C:\\fakepath\\2020-06-19 at 13-33-46.png",
-      "categorie": "foot"
-    },
-    {
-      "id": "tTNqVWX",
-      "nom": "cine",
-      "date": "2020-12-15T23:00:00.000Z",
+      "id": "4WcDdru",
+      "nom": "fefe",
+      "date": "2020-12-16T23:00:00.000Z",
       "places": "8",
-      "description": "jjjj",
+      "description": "fff",
       "image": "",
       "categorie": "cinema"
-    },
+    }
+  ],
+  "Users": [
     {
-      "id": "Drh2oHX",
-      "nom": "gggeeee",
-      "date": "2020-12-09T23:00:00.000Z",
-      "places": "88",
-      "description": "eee",
-      "image": "",
-      "categorie": "cinema"
-    },
-    {
-      "id": "yO5lvhd",
-      "nom": "eeeee",
-      "date": "2020-12-15T23:00:00.000Z",
-      "places": "55",
-      "description": "zz",
-      "image": "",
-      "categorie": "cinema"
-    },
-    {
-      "id": "N26BpAT",
-      "nom": "rrr",
-      "date": "2020-12-15T23:00:00.000Z",
-      "places": "41",
-      "description": "aeazeazeaz",
-      "image": "",
-      "categorie": "cinema"
-    },
-    {
-      "id": "av2Yfoi",
-      "nom": "kk",
-      "date": "2020-12-15T23:00:00.000Z",
-      "places": "8",
-      "description": "8",
-      "image": "",
-      "categorie": "ops"
+      "id": 4,
+      "username": "ee",
+      "email": "ee",
+      "role": "client",
+      "password": "20791756",
+      "connected": 0
     }
   ]
 }

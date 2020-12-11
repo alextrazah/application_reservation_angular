@@ -23,10 +23,40 @@
             <span class="sr-only"></span>
           </a>
         </li>
-        <li class="nav-item">
-          <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#elegantModalForm">sign in</a>
+        <div *ngFor="let b of Users ; let i=index">
 
-        </li>
+          <div *ngIf="b.connected==0">
+            <li class="nav-item active">
+              <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#elegantModalForm">sign in</a>
+            </li>
+          </div>
+
+          <div *ngIf="b.connected== 1" >
+            <li class="nav-item active">
+              <a  class="nav-link" >{{b.username}}
+                <span class="sr-only"></span>
+              </a>
+            </li>
+            <li class="nav-item active">
+              <a   mat-raised-button (click)="Logout(b.id)" >Logout
+                <span class="sr-only"></span>
+              </a>
+            </li>
+
+          <div *ngIf=" b.role =='admin'">
+            <li class="nav-item active">
+              <a class="nav-link" [routerLink]="['/dashboard']">admin
+                <span class="sr-only"></span>
+              </a>
+            </li>
+          </div>
+          </div>
+
+
+        </div>
+
+
+
       </ul>
     </div>
   </div>

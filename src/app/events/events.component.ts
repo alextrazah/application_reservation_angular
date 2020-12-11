@@ -15,7 +15,7 @@ export class EventsComponent implements OnInit {
   @Output() reserve = new EventEmitter();
   events;
   type_e: string ;
-
+  searchvalue;
   constructor(private serviceevent: EventService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -31,6 +31,15 @@ export class EventsComponent implements OnInit {
           alert(errors.status);
         },
       );
+  }
+  onsearch(){
+    this.serviceevent.search(this.searchvalue).subscribe(
+      (data) => {
+        if ( this.searchvalue != null) {
+          this.events = data;
+        }
+      }
+    );
   }
   clickon(){
     console.log(this.event_type);

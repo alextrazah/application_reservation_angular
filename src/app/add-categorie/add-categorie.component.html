@@ -1,5 +1,50 @@
 
-<br>
+
+
+
+
+<section id="container" class="">
+
+  <!--header start-->
+
+  <!--header end-->
+
+  <!--sidebar start-->
+  <aside>
+    <div id="sidebar" class="nav-collapse ">
+      <!-- sidebar menu start-->
+      <ul class="sidebar-menu">
+        <li class="">
+          <a class="nav-link" [routerLink]="['/dashboard/cat']">
+            <i class="fas fa-bookmark"></i>
+            <span>Categories</span>
+          </a>
+        </li>
+
+
+        <li>
+          <a class="nav-link" [routerLink]="['/dashboard/event']">
+            <i class="fas fa-bookmark"></i>
+            <span>event</span>
+          </a>
+        </li>
+
+
+
+      </ul>
+      <!-- sidebar menu end-->
+    </div>
+  </aside>
+
+
+
+
+  <section id="main-content">
+    <section class="wrapper">
+      <div class="row">
+        <div class="col-lg-12">
+          <section class="panel">
+
 <form [formGroup]="myForm" (ngSubmit)=" Categorieservice.submit(myForm.value) " class="example-form" >
 
 
@@ -11,14 +56,24 @@
   </mat-form-field>
   <br>
 
-  <mat-form-field class="example-full-width">
-    <input  matInput placeholder="type" formControlName="type">
+
+    <mat-label>Categorie</mat-label>
+    <select mat-select placeholder="type" formControlName="type" class="browser-default custom-select" >
+      <option value='Sport'>Sport</option>
+      <option value='Education'>Education</option>
+      <option value='diver'>diver</option>
+    </select>
     <mat-error *ngIf="type.invalid" >
-      Veuillez saisir le titre
+      Veuillez choisir la categorie
     </mat-error>
-  </mat-form-field>
 
 
   <br><br>
   <button type="submit"  mat-raised-button >Ajouter Categorie</button>
 </form>
+          </section>
+        </div>
+      </div>
+    </section>
+  </section>
+</section>

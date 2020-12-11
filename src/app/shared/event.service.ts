@@ -23,12 +23,27 @@ export class EventService {
     return this
       .http.get<any>('http://localhost:3000/events/');
   }
+  getEventbyid(id: number) {
+    return this.http.get('http://localhost:3000/events/' + id);
+  }
   countevent(){
   return this.getallevent();
   }
   addEvent(data: any): Observable<any> {
     const url = 'http://localhost:3000/events/';
     return this.http.post(url, data);
+  }
+  dellEvent(id: number) {
+    return this.http.delete('http://localhost:3000/events/' + id);
+  }
+  updateEvent(data: any, id: any): Observable<any> {
+    const url: string = 'http://localhost:3000/events/' + id;
+    return this.http.put(url, data);
+  }
+  search(q: string): Observable<any> {
+    return this.http.get(
+      'http://localhost:3000/' + 'events?nom_like=' + q
+    );
   }
 
   submit(form) {

@@ -19,15 +19,27 @@ export class CategorieService {
     return this
       .http.get<any>('http://localhost:3000/Categories/');
   }
+  getCategoriebyid(id: number) {
+    return this.http.get('http://localhost:3000/Categories/' + id);
+  }
   addCategorie(data: any): Observable<any> {
     const url = 'http://localhost:3000/Categories/';
     return this.http.post(url, data);
+  }
+  updateCategorie(data: any, id: any): Observable<any> {
+    const url: string = 'http://localhost:3000/Categories/' + id;
+    return this.http.put(url, data);
+  }
+  search(q: string): Observable<any> {
+    return this.http.get(
+      'http://localhost:3000/' + 'Categories?nom_like=' + q
+    );
   }
   submit(form) {
 
     this.addCategorie(form)
       .subscribe(() => {
-          this.router.navigate(['/shop']);
+          this.router.navigate(['/dashboard/cat ']);
         },
         (error) => {
           switch (error.status) {

@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder , FormGroup , Validators} from '@angular/forms';
 import {Observable} from 'rxjs';
-import {LoginService} from '../shared/Login.service';
+import {UserService} from '../shared/user.service';
 import {Router} from '@angular/router';
+import {User} from '../Model/user';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,7 @@ export class LoginComponent implements OnInit {
   errorMsg: string;
 
 
-  constructor(private fb: FormBuilder, public Loginservice: LoginService , private router: Router) {
+  constructor(private fb: FormBuilder, public Userservice: UserService , private router: Router) {
     this.myForm = this.fb.group({
       username: ['', Validators.required],
       password: ['', Validators.required],

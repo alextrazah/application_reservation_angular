@@ -20,7 +20,6 @@ quant = 0 ;
   bb: [];
   id: number;
   j;
-  image ='/assets/flame.png';
 nombres;
 
   constructor(private servicecategorie: CategorieService, private activatedRoute: ActivatedRoute, private nm: EventService) { }
@@ -37,8 +36,6 @@ nombres;
           alert(errors.status);
         },
       );
-
-
     this.nm.getallevent()
       .subscribe(
         (data) => {
