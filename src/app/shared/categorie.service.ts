@@ -26,6 +26,10 @@ export class CategorieService {
     const url = 'http://localhost:3000/Categories/';
     return this.http.post(url, data);
   }
+
+  dellcat(id: number) {
+    return this.http.delete('http://localhost:3000/Categories/' + id);
+  }
   updateCategorie(data: any, id: any): Observable<any> {
     const url: string = 'http://localhost:3000/Categories/' + id;
     return this.http.put(url, data);
@@ -39,7 +43,7 @@ export class CategorieService {
 
     this.addCategorie(form)
       .subscribe(() => {
-          this.router.navigate(['/dashboard/cat ']);
+          this.router.navigate(['/dashboard/cat']);
         },
         (error) => {
           switch (error.status) {

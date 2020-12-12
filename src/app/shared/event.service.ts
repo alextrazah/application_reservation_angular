@@ -50,7 +50,7 @@ export class EventService {
 
     this.addEvent(form)
       .subscribe(() => {
-          this.router.navigate(['/list']);
+          this.router.navigate(['/dashboard/event']);
         },
         (error) => {
           switch (error.status) {

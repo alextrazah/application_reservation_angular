@@ -1,9 +1,15 @@
 <input  placeholder="Search..." type="text" [(ngModel)]="searchvalue" (input)="onsearch()" />
-<div *ngFor="let b of events" class="card">
+
+<div *ngFor="let b of events">
+  <br>
+<div  class="card">
 
   <div *ngIf="(b.categorie == event_type)" class="row no-gutters">
+    <br>
     <div class="col-auto">
-      <img src="//placehold.it/280" class="img-fluid" alt="">
+      <div class="imgk">
+        <img src="{{'/assets/'+(b.image).substring(12)}}" class="img-fluid" alt="">
+      </div>
     </div>
     <div class="col">
       <div class="card-block px-2">
@@ -16,6 +22,26 @@
     </div>
 
   </div>
+
+  <div *ngIf="(event_type == '')" class="row no-gutters">
+    <div class="col-auto">
+      <div class="imgk">
+      <img src="{{'/assets/'+(b.image).substring(12)}}" class="img-fluid" alt="">
+      </div>
+    </div>
+    <div class="col">
+      <div class="card-block px-2">
+        <br>
+        <h1 class="card-title">{{b.nom}}</h1>
+        <h4 class="card-text">{{b.description}}</h4>
+        <h3 >{{b.date|date  }}</h3>
+        <a href="#" class="btn btn-primary">Réserver</a>
+      </div>
+    </div>
+
+  </div>
+
+</div>
 
 </div>
 

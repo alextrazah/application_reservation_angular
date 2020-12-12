@@ -4,3 +4,10 @@ input{
   margin: 8px 0;
   box-sizing: border-box;
 }
+.imgk {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  float: left;
+  background: #fff;
+}
