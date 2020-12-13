@@ -23,22 +23,13 @@
   ],
   "events": [
     {
-      "id": "sqhOnRG",
-      "nom": "fdfsd",
-      "date": "2020-12-09T23:00:00.000Z",
-      "places": "22",
-      "description": "gggg",
-      "image": "C:\\fakepath\\affichepieuvre.jpg",
-      "categorie": "nounou"
-    },
-    {
-      "id": "k1B38TC",
-      "nom": "test0",
-      "date": "2020-12-21T23:00:00.000Z",
-      "places": "55",
-      "description": "ddd",
-      "image": "C:\\fakepath\\flame.png",
-      "categorie": "cinema"
+      "id": 1,
+      "nom": "match cs - est",
+      "date": "2020-12-16T23:00:00.000Z",
+      "places": "50",
+      "description": "balablalba",
+      "image": "C:\\fakepath\\stade-de-sousse.jpg",
+      "categorie": "foot"
     }
   ],
   "Users": [
@@ -49,6 +40,37 @@
       "role": "client",
       "password": "20791756",
       "connected": 0
+    },
+    {
+      "username": "aziz",
+      "email": "zaaz",
+      "role": "zaza",
+      "password": "20791756",
+      "connected": 0,
+      "id": 5
+    },
+    {
+      "username": "ahmed",
+      "email": "azizsahnoun5@gmail.com",
+      "role": "azaaz",
+      "password": "20791756",
+      "connected": 0,
+      "id": 6
+    },
+    {
+      "username": "aziz55",
+      "email": "azizsahnoun5@gmail.com",
+      "role": "zz",
+      "password": "20791756",
+      "connected": 0,
+      "id": 7
+    },
+    {
+      "username": "lol",
+      "email": "azizsahnoun5@gmail.com",
+      "password": "20791756",
+      "connected": 0,
+      "id": 8
     }
   ]
 }

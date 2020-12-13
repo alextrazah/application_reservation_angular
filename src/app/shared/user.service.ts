@@ -12,6 +12,9 @@ export class UserService {
 
   addUser(data: any): Observable<any> {
     const url = 'http://localhost:3000/Users/';
+    this.router.navigate(['/shop']).then(() => {
+      window.location.reload();
+    });
     return this.http.post(url, data);
   }
 
@@ -27,9 +30,18 @@ export class UserService {
 
   Logout(data: any, id: any): Observable<any> {
     const url: string = 'http://localhost:3000/Users/' + id;
+    this.router.navigate(['/shop']).then(() => {
+      window.location.reload();
+    });
     return this.http.put(url, data);
   }
-
+  login(data: any, id: any): Observable<any> {
+    const url: string = 'http://localhost:3000/Users/' + id;
+    this.router.navigate(['/shop']).then(() => {
+      window.location.reload();
+    });
+    return this.http.put(url, data);
+  }
   submit(form) {
     console.log(form);
     this.addUser(form)
@@ -62,6 +74,11 @@ export class UserService {
     this.Logout(data, id).subscribe(() => {
       }
     );
+  }
 
+  submit3(data, id) {
+    this.login(data, id).subscribe(() => {
+      }
+    );
   }
 }

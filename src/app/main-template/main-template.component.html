@@ -1,10 +1,10 @@
 <div style="background-color: #5bc0de">
 
 <!-- Page Content -->
-  <br>
-  <br>
-  <br>
-  <br>
+<br>
+<br>
+<br>
+<br>
 <div class="container">
 
   <div class="row">
@@ -39,7 +39,7 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
-        </div>
+      </div>
 
 
 
@@ -53,164 +53,7 @@
   <!-- /.row -->
 
 </div>
-<!-- Modal -->
-<div class="modal fade" id="elegantModalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <!--Content-->
-    <div class="modal-content form-elegant">
-      <!--Header-->
-      <div class="modal-header text-center">
-        <h3 class="modal-title w-100 dark-grey-text font-weight-bold my-3" id="myModalLabel"><strong>Sign in</strong></h3>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <!--Body-->
-      <div class="modal-body mx-4">
-        <!--Body-->
-        <div class="md-form mb-5">
-          <input type="email" id="Form-email1" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="Form-email1">Your email</label>
-        </div>
 
-        <div class="md-form pb-3">
-          <input type="password" id="Form-pass1" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="Form-pass1">Your password</label>
-          <p class="font-small blue-text d-flex justify-content-end">Forgot <a href="#" class="blue-text ml-1">
-            Password?</a></p>
-        </div>
-
-        <div class="text-center mb-3">
-          <button type="button" class="btn blue-gradient btn-block btn-rounded z-depth-1a">Sign in</button>
-        </div>
-        <p class="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2"> or Sign in
-          with:</p>
-
-        <div class="row my-3 d-flex justify-content-center">
-          <!--Facebook-->
-          <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><i class="fab fa-facebook-f text-center"></i></button>
-          <!--Twitter-->
-          <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><i class="fab fa-twitter"></i></button>
-          <!--Google +-->
-          <button type="button" class="btn btn-white btn-rounded z-depth-1a"><i class="fab fa-google-plus-g"></i></button>
-        </div>
-      </div>
-      <!--Footer-->
-      <div class="modal-footer mx-5 pt-3 mb-1">
-        <a href="" class="font-small grey-text d-flex justify-content-end" data-toggle="modal" data-target="#elegForm">sign Up</a>
-      </div>
-    </div>
-    <!--/.Content-->
-  </div>
 </div>
-
-
-
-
-  <!--/SIIIIIIIIIIIIIIIIIIIIIIIIIIIGNNNNNNNNNNNNNNNNNUUUUUUUUUUUUUUUUUUUUUPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP-->
-
-
-
-
-
-
-
-  <div class="modal fade" id="elegForm" tabindex="-1" role="dialog" aria-labelledby=""
-       aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <!--Content-->
-      <div class="modal-content form-elegant">
-        <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
-        <!--Header-->
-        <div class="modal-header text-center">
-          <h3 class="modal-title w-100 dark-grey-text font-weight-bold my-3" id="myModalLabel"><strong>Sign Up</strong></h3>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <!--Body-->
-        <div class="modal-body mx-4">
-          <!--Body-->
-          <br>
-
-          <div class="md-form mb-5">
-            <input type="email" id="Form-email1" class="form-control validate"
-                   placeholder="UserName..." required name="username" ngModel #username="ngModel">
-            <mat-icon matSuffix>perm_identity</mat-icon>
-            <mat-error
-              *ngIf="username.touched && username.invalid">
-              Username is required
-            </mat-error>
-          </div>
-          <div class="md-form mb-5">
-            <input type="email" id="Form-email1" class="form-control validate" placeholder="email..." required
-                   name="email" ngModel #email="ngModel">
-            <mat-error *ngIf="email.touched && email.invalid">Email is required</mat-error>
-            <mat-icon matSuffix>email</mat-icon>
-          </div>
-          <div class="md-form mb-5">
-            <input type="text" id="Form-email1" class="form-control validate"   placeholder="Role" required name="role" ngModel #role="ngModel">
-            <mat-error *ngIf="role.touched && role.invalid">
-        Role is required</mat-error>
-
-          </div>
-
-          <div class="md-form pb-3">
-            <input type="password" id="Form-pass1" class="form-control validate"  placeholder="Password"
-                   required
-                   minlength="6"
-                   name="password"
-                   ngModel #password="ngModel">
-            <mat-error
-            *ngIf="password.touched && password.errors && password.errors.required">
-            Password is required
-          </mat-error>
-            <mat-error
-              *ngIf="password.errors && password.errors.minlength">
-              Password must be of length 6
-            </mat-error>
-            <mat-icon matSuffix>lock</mat-icon>
-
-          </div>
-          <div class="md-form pb-3">
-            <input type="password" id="Form-pass1" class="form-control validate"
-                   placeholder="Repassword"
-                   type="password"
-                   required
-                   minlength="6"
-                   name="repassword"
-                   ngModel
-                   #repassword="ngModel">
-            <mat-error
-              *ngIf="repassword.touched && repassword.errors && repassword.errors.required">
-              Re-Enter Password is required
-            </mat-error>
-            <mat-icon matSuffix>lock</mat-icon>
-
-          </div>
-
-          <div class="text-center mb-3">
-            <button  class="btn blue-gradient btn-block btn-rounded z-depth-1a" type="submit" [disabled]="userForm.invalid">Sign Up</button>
-          </div>
-          <p class="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2"></p>
-          <div class="row my-3 d-flex justify-content-center">
-            <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"></button>
-            <!--Twitter-->
-            <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"></button>
-            <!--Google +-->
-            <button type="button" class="btn btn-white btn-rounded z-depth-1a"></button>
-          </div>
-
-
-        </div>
-        <!--Footer-->
-        </form>
-      </div>
-      <!--/.Content-->
-    </div>  </div></div>
-
-
-
 <!-- Modal -->
-
+<!-- Modal -->

@@ -26,7 +26,6 @@ export class MainTemplateComponent implements OnInit {
         (data) => {
 
           this.users = data;
-          console.log(this.users);
         },
         errors => {
           console.log(errors);
@@ -35,18 +34,18 @@ export class MainTemplateComponent implements OnInit {
       );
   }
   get_type(k: string){
-   // console.log(k);
+    // console.log(k);
     this.vars = k;
   }
 
-onSubmit(form){
+  onSubmit(form){
 
-  const {id, username , email , role, password , repassword} = form.value;
-  console.log(form.value);
-  const newUser = new User(id, username, email, role, password);
-  this.userService.submit(newUser);
+    const {id, username , email , role, password , repassword} = form.value;
+    console.log(form.value);
+    const newUser = new User(id, username, email, role, password);
+    this.userService.submit(newUser);
 
-}
+  }
 
 
 }

@@ -1,4 +1,3 @@
-
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container">
@@ -13,51 +12,33 @@
             <span class="sr-only"></span>
           </a>
         </li>
-        <li class="nav-item active">
-          <a class="nav-link" [routerLink]="['/accueil']">Categorie
-            <span class="sr-only"></span>
-          </a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" [routerLink]="['/addevent']">Event
-            <span class="sr-only"></span>
-          </a>
-        </li>
-        <div *ngFor="let b of Users ; let i=index">
-
-          <div *ngIf="b.connected==0">
-            <li class="nav-item active">
-              <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#elegantModalForm">sign in</a>
-            </li>
-          </div>
-
-          <div *ngIf="b.connected== 1" >
-            <li class="nav-item active">
-              <a  class="nav-link" >{{b.username}}
-                <span class="sr-only"></span>
-              </a>
-            </li>
-            <li class="nav-item active">
-              <a   mat-raised-button (click)="Logout(b.id)" >Logout
-                <span class="sr-only"></span>
-              </a>
-            </li>
-
-          <div *ngIf=" b.role =='admin'">
-            <li class="nav-item active">
-              <a class="nav-link" [routerLink]="['/dashboard']">admin
-                <span class="sr-only"></span>
-              </a>
-            </li>
-          </div>
-          </div>
 
 
+
+        <div *ngIf="varse==0">
+          <a mat-raised-button routerLink="login">Sign up</a>
         </div>
 
+
+
+          <div *ngIf="user.connected== 1" >
+            <li class="nav-item active">
+              <a  class="nav-link" >welcome {{user.username}}
+                <span class="sr-only"></span>
+              </a>
+            </li>
+          </div>
+
+          <div *ngIf="user.connected== 1" >
+            <li class="nav-item active">
+              <a  mat-raised-button (click)="Logout(user.id)" >Logout </a>
+            </li>
+          </div>
 
 
       </ul>
     </div>
   </div>
 </nav>
+
+

@@ -30,6 +30,9 @@ import { DashEventComponent } from './dash-event/dash-event.component';
 import { UpdateEventComponent } from './update-event/update-event.component';
 import { UpdateCategorieComponent } from './update-categorie/update-categorie.component';
 import { UserComponent } from './user/user.component';
+import { SingleEventComponent } from './single-event/single-event.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatTabsModule} from '@angular/material/tabs';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +49,8 @@ import { UserComponent } from './user/user.component';
     DashEventComponent,
     UpdateEventComponent,
     UpdateCategorieComponent,
-    UserComponent
+    UserComponent,
+    SingleEventComponent
   ],
   imports: [
     BrowserModule,
@@ -67,6 +71,10 @@ import { UserComponent } from './user/user.component';
     BrowserAnimationsModule,
     MatNativeDateModule,
     MatIconModule,
+    FormsModule,
+    MatCardModule,
+    MatTabsModule,
+    MatCheckboxModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,136 @@
-llllllllllll
+<div class="login-page">
+  <mat-card class="mat-elevation-z12">
+    <mat-card-title style="text-align:center;">SignIn/SignUp</mat-card-title>
+    <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
+      <mat-tab label="Sign In">
+        <mat-card-content>
+          <form #userForm2="ngForm" (ngSubmit)="onSubmit2(userForm2)">
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="Username"
+                required
+                name="email"
+                ngModel
+                #email1="ngModel"
+              >
+              <mat-error *ngIf="email1.invalid">Email is required</mat-error>
+              <mat-icon matSuffix>perm_identity</mat-icon>
+            </mat-form-field>
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="Password"
+                type="password"
+                required
+                minlength="6"
+                name="password"
+                ngModel
+                password="ngModel">
+              <mat-error
+                *ngIf="password.errors && password.errors.required">
+                Password is required
+              </mat-error>
+              <mat-error
+                *ngIf="password.errors && password.errors.minlength">
+                Password must be of length 6
+              </mat-error>
+              <mat-icon matSuffix>lock</mat-icon>
+            </mat-form-field>
+
+            <button
+              class="login-button"
+              mat-raised-button>
+              Sign In
+            </button>
+
+
+          </form>
+        </mat-card-content>
+      </mat-tab>
+      <mat-tab label="Sign Up">
+        <mat-card-content>
+          <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="Username" required name="username" ngModel #username="ngModel">
+              <mat-icon matSuffix>perm_identity</mat-icon>
+              <mat-error
+                *ngIf="username.invalid">
+                Username is required
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="Email"
+                required
+                name="email"
+                ngModel
+                #email="ngModel"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+              <mat-icon matSuffix>email</mat-icon>
+              <mat-error
+                *ngIf="email.errors && email.errors.required">
+                Email is required
+              </mat-error>
+              <mat-error
+                *ngIf="email.errors && email.errors.pattern">
+                Veuillez entrer une adresse email valide.
+              </mat-error>
+
+            </mat-form-field>
+
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="Password"
+                type="password"
+                required
+                minlength="6"
+                name="password"
+                ngModel
+                #password="ngModel">
+              <mat-error
+                *ngIf="password.errors && password.errors.required">
+                Password is required
+              </mat-error>
+              <mat-error
+                *ngIf="password.errors && password.errors.minlength">
+                Password must be of length 6
+              </mat-error>
+              <mat-icon matSuffix>lock</mat-icon>
+
+            </mat-form-field>
+
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="Password"
+                type="password"
+                required
+                minlength="6"
+                name="repassword"
+                ngModel
+                #repassword="ngModel">
+              <mat-error
+                *ngIf="repassword.errors && repassword.errors.required">
+                Re-Enter Password is required
+              </mat-error>
+              <mat-icon matSuffix>lock</mat-icon>
+            </mat-form-field>
+
+            <button
+              mat-raised-button
+              class="login-button" [disabled]="userForm.invalid">
+              Sign Up
+            </button>
+          </form>
+        </mat-card-content>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-card>
+</div>
+

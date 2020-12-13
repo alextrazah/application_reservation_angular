@@ -2,7 +2,7 @@
 
 <div *ngFor="let b of events">
   <br>
-<div  class="card">
+<div  [routerLink]="['/single/event/',b.id]" class="card bg-secondary text-white">
 
   <div *ngIf="(b.categorie == event_type)" class="row no-gutters">
     <br>
@@ -12,16 +12,18 @@
       </div>
     </div>
     <div class="col">
-      <div class="card-block px-2">
+      <div  class="card-block px-2">
         <br>
-        <h1 class="card-title">{{b.nom}}</h1>
-        <h4 class="card-text">{{b.description}}</h4>
-        <h3 >{{b.date|date  }}</h3>
-        <a href="#" class="btn btn-primary">Réserver</a>
+        <h2 class="card-title">{{b.nom}}</h2>
+        <h4 class="card-subtitle mb-2" >{{b.categorie  }}</h4>
+        <p class="card-text">{{b.description}}</p>
+        <h5 class="card-subtitle mb-2"  >{{b.date|date  }}</h5>
       </div>
     </div>
 
   </div>
+
+  <div  [routerLink]="['/single/event/',b.id]" class="card bg-secondary text-white">
 
   <div *ngIf="(event_type == '')" class="row no-gutters">
     <div class="col-auto">
@@ -32,16 +34,14 @@
     <div class="col">
       <div class="card-block px-2">
         <br>
-        <h1 class="card-title">{{b.nom}}</h1>
-        <h4 class="card-text">{{b.description}}</h4>
-        <h3 >{{b.date|date  }}</h3>
-        <a href="#" class="btn btn-primary">Réserver</a>
+        <h2 class="card-title">{{b.nom}}</h2>
+        <h4 class="card-subtitle mb-2" >{{b.categorie  }}</h4>
+        <p class="card-text">{{b.description}}</p>
+        <h5 class="card-subtitle mb-2"  >{{b.date|date  }}</h5>
       </div>
     </div>
 
   </div>
-
-</div>
 
 </div>
 

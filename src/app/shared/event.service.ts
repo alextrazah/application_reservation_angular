@@ -23,7 +23,7 @@ export class EventService {
     return this
       .http.get<any>('http://localhost:3000/events/');
   }
-  getEventbyid(id: number) {
+  getEventbyid(id) {
     return this.http.get('http://localhost:3000/events/' + id);
   }
   countevent(){

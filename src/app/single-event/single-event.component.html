@@ -1,0 +1,28 @@
+
+<br>
+<br>
+
+
+<div class="container">
+
+  <!-- Heading Row -->
+  <div class="row align-items-center my-5">
+    <div class="col-lg-7">
+      <img class="imgk" src="{{'/assets/'+(events.image).substring(12)}}" alt="">
+    </div>
+    <!-- /.col-lg-8 -->
+    <div class="col-lg-5">
+      <h1 class="font-weight-light">{{events.nom}}</h1>
+      <p>{{events.description}}</p>
+      <h3 class="font-weight-light">Le : {{events.date|date}}</h3>
+
+      <h2 class="font-weight-light">nombre de place disponibles : {{events.places}}</h2>
+      <a class="btn btn-primary" href="#">participer</a>
+    </div>
+    <!-- /.col-md-4 -->
+  </div>
+  <!-- /.row -->
+
+  <!-- /.row -->
+
+</div>

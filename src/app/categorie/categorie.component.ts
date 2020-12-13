@@ -64,7 +64,6 @@ if (this.var[i].categorie == j) {
  c++;
 }
     }
-console.log(j);
 return c;
   }
 

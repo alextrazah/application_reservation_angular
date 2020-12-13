@@ -8,6 +8,8 @@ import {DashEventComponent} from './dash-event/dash-event.component';
 import {DashCatComponent} from './dash-cat/dash-cat.component';
 import {UpdateEventComponent} from './update-event/update-event.component';
 import {UpdateCategorieComponent} from './update-categorie/update-categorie.component';
+import {SingleEventComponent} from './single-event/single-event.component';
+import {LoginComponent} from './login/login.component';
 
 
 
@@ -19,7 +21,9 @@ const routes: Routes = [
   {path: 'dashboard/event', component: DashEventComponent},
   {path: 'dashboard/cat', component: DashCatComponent },
   {path: 'Update/Event/:id', component: UpdateEventComponent},
+  {path: 'single/event/:id', component: SingleEventComponent},
   {path: 'Update/Categ/:id', component: UpdateCategorieComponent},
+  {path: 'login', component: LoginComponent }
 ];
 
 @NgModule({

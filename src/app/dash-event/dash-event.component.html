@@ -1,0 +1,72 @@
+<section id="container" class="">
+  <!--header start-->
+
+  <!--header end-->
+
+  <!--sidebar start-->
+  <aside>
+    <div id="sidebar" class="nav-collapse ">
+      <!-- sidebar menu start-->
+      <ul class="sidebar-menu">
+        <li class="">
+          <a class="nav-link" [routerLink]="['/dashboard/cat']">
+            <i class="fas fa-bookmark"></i>
+            <span>Categories</span>
+          </a>
+        </li>
+
+
+        <li>
+          <a class="nav-link" [routerLink]="['/dashboard/event']">
+            <i class="fas fa-bookmark"></i>
+            <span>event</span>
+          </a>
+        </li>
+      </ul>
+      <!-- sidebar menu end-->
+    </div>
+  </aside>
+  <section id="main-content">
+    <section class="wrapper">
+      <div class="row">
+        <div class="col-lg-12">
+          <section class="panel">
+
+            <button type="button" class="btn btn-primary btn-lg btn-block " [routerLink]="['/addevent']">ajouter un
+              évènement</button>
+            <br>
+            <input  placeholder="Search..." type="text" [(ngModel)]="searchvalue" (input)="onsearch()" />
+<br><br>
+            <table class="table table-striped table-advance table-hover"   >
+              <tbody>
+              <tr>
+                <th><i class="fas fa-name"></i> nom</th>
+                <th><i class="fas fa-calendar"></i> date</th>
+                <th><i class="fas fa-flag"></i> Description</th>
+                <th><i class="fas fa-flag"></i> nombre de place dispo</th>
+                <th><i class="fas fa-flag"></i> categorie</th>
+                <th><i class="fas fa-check"></i> Action</th>
+              </tr>
+              <tr *ngFor="let b of events" >
+                <td>{{b.nom}}</td>
+                <td>{{b.date|date }}</td>
+                <td>{{b.description}}</td>
+                <td>{{b.places}}</td>
+                <td>{{b.categorie}}</td>
+                <td>
+                  <section id="button-shadow">
+                    <a class="btn btn-info btn-min-width box-shadow-3 mr-1 mb-1" [routerLink]="['/Update/Event/',b.id]">Edit</a>
+                    <a class="btn btn-danger btn-min-width box-shadow-5 mr-1 mb-1" (click)="supprimer(b.id)" >Delete</a>
+                  </section>
+                </td>
+              </tr>
+
+              </tbody>
+            </table>
+          </section>
+        </div>
+      </div>
+      <!-- page end-->
+    </section>
+  </section>
+</section>
