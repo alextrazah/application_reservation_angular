@@ -24,7 +24,6 @@ export class DashCatComponent implements OnInit {
       .subscribe(
         (data) => {
           this.Categories = data;
-          this.var = data;
         },
         errors => {
           console.log(errors);
@@ -49,11 +48,11 @@ export class DashCatComponent implements OnInit {
     let h: number;
     h = this.var.length;
     for (let i = 0; i < h; i++) {
-// tslint:disable-next-line:triple-equals
       if (this.var[i].categorie == j) {
         c++;
       }
     }
+   return c;
   }
   onsearch(){
     this.servicecategorie.search(this.searchvalue).subscribe(

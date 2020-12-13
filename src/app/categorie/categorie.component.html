@@ -4,15 +4,15 @@
 <div>
 
 
-  <h1 >Shop Name</h1>
+  <h4 >participez avant qu'il soit trop tard !</h4>
 
   <div *ngFor="let b of Categories">
 
       <ul class="list-group">
-          <a style="cursor:pointer;width: 220px" (click)="clickon(b.nom)"  class="list-group-item d-flex justify-content-between align-items-center" [ngStyle]="{'backgroundImage': num(b.nom)>5 ? 'url(/assets/flame.png)': 'url(/assets/fldame.png)'} ">
+          <h3 style="cursor:pointer;width: 220px" (click)="clickon(b.nom)"  class="list-group-item d-flex justify-content-between align-items-center" [ngStyle]="{'backgroundImage': num(b.nom)>5 ? 'url(/assets/flame.png)': 'url(/assets/fldame.png)'} ">
             <h3>{{b.nom}} </h3>
             <span class="badge badge-primary badge-pill" >{{num(b.nom)}}</span>
-          </a>
+          </h3>
         <br>
 
 

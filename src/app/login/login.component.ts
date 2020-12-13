@@ -49,14 +49,17 @@ export class LoginComponent implements OnInit {
 
     h = this.users.length;
     let c=0;
+    let n=0;
 
+    if ("admin"== form2.value.email && "admin"== form2.value.password ) {
+      n=1;
+      window.open('http://localhost:4200/dashboard/cat', '_blank');
+    }
     for (let i = 0; i < h; i++) {
 // tslint:disable-next-line:triple-equals
-      if ("admin"== form2.value.email && "admin"== form2.value.password ) {
-        window.open('http://localhost:4200/dashboard/cat', '_blank');
-      }
 
-     else if (this.users[i].username == form2.value.email) {
+
+     if (this.users[i].username == form2.value.email) {
         k=i;
         console.log(k);
         if(this.users[k].password == form2.value.password){

@@ -17,7 +17,21 @@
       <h3 class="font-weight-light">Le : {{events.date|date}}</h3>
 
       <h2 class="font-weight-light">nombre de place disponibles : {{events.places}}</h2>
-      <a class="btn btn-primary" href="#">participer</a>
+
+      <form [formGroup]="myForm" (ngSubmit)=" serviceevent.participer(myForm.value,name,events.id) " class="example-form" >
+
+
+        <input placeholder="nom" formControlName="nom"  type="hidden"  >
+          <input placeholder="nom" formControlName="type"  type="hidden">
+
+
+        <button *ngIf="((events.dis == name) &&(events.places !=0))" type="submit" disabled mat-raised-button >vous avez déja participé</button>
+        <button *ngIf="((events.places ==0))" type="submit" disabled mat-raised-button >pas de places disponibles</button>
+
+      </form>
+
+      <button *ngIf="((events.dis != name) &&(events.places !=0)&&(name=='noone'))" href="#"[routerLink]="['/login']" mat-raised-button >sing in pour participer</button>
+
     </div>
     <!-- /.col-md-4 -->
   </div>

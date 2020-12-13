@@ -1,16 +1,25 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Router} from '@angular/router';
 import {Event} from '../Model/events';
 import {Observable} from 'rxjs';
+import {Participation} from '../Model/participation';
+
 @Injectable({
   providedIn: 'root'
 })
 export class EventService {
+  vars;
 
   constructor(private http: HttpClient, private router: Router) {
   }
   // tslint:disable-next-line:typedef
+
+  httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json'
+    })
+  }
   getallevents() {
     return this .http.get<Event[]>('./assets/event.json');
   }
@@ -32,6 +41,15 @@ export class EventService {
   addEvent(data: any): Observable<any> {
     const url = 'http://localhost:3000/events/';
     return this.http.post(url, data);
+  }
+  addparticipation(data: any): Observable<any>  {
+    const url = 'http://localhost:3000/Participation/';
+    console.log(data);
+    return this.http.post(url, data);
+  }
+  addP(participation: Participation): Observable<Participation> {
+    console.log(this.http.post<Participation>('http://localhost:3000/Participation/', participation, this.httpOptions));
+    return this.http.post<Participation>('http://localhost:3000/Participation/', participation, this.httpOptions);
   }
   dellEvent(id: number) {
     return this.http.delete('http://localhost:3000/events/' + id);
@@ -71,5 +89,37 @@ export class EventService {
           }
         }
       );
+  }
+
+  participer(form ,id_user,id_eve) {
+    form.nom=id_eve;
+    form.type=id_user;
+
+    this.getEventbyid(id_eve).subscribe(
+      data => {
+        console.log('this.vaar');
+        this.vars=data;
+        this.vars.places--;
+        console.log(this.vars);
+        this.vars.dis=id_user;
+        this.updateEvent(this.vars,id_eve).subscribe(() => {
+          this.router.navigateByUrl('/shop', { skipLocationChange: true }).then(() => {
+            this.router.navigate(['/blog']);
+          });
+        });
+      }, error => {
+
+        console.log(error);
+        alert('id not found');
+      }
+    )
+    ;
+  }
+  upplace(data: any, id: any){
+    console.log("jdidaaa");
+    data.places=data.places+"";
+    console.log(data);
+    console.log(id);
+    this.updateEvent(data,id);
   }
 }

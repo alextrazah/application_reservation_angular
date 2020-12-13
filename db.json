@@ -1,76 +1,54 @@
 {
   "categories": [
     {
-      "id": "2",
+      "id": 1,
+      "nom": "cinema",
+      "type": "diver"
+    },
+    {
+      "id": 2,
       "nom": "foot",
       "type": "Sport"
-    },
-    {
-      "id": "5",
-      "nom": "cinema",
-      "type": "Education"
-    },
-    {
-      "id": "a6i4PaK",
-      "nom": "nounou",
-      "type": "Education"
-    },
-    {
-      "id": "n-lr1FX",
-      "nom": "zeaeaa",
-      "type": "diver"
     }
   ],
   "events": [
     {
       "id": 1,
-      "nom": "match cs - est",
-      "date": "2020-12-16T23:00:00.000Z",
-      "places": "50",
-      "description": "balablalba",
-      "image": "C:\\fakepath\\stade-de-sousse.jpg",
-      "categorie": "foot"
+      "nom": "ahmed",
+      "date": "2020-12-07T23:00:00.000Z",
+      "places": "20",
+      "description": "555",
+      "image": "C:\\fakepath\\870x489_theatre.jpg",
+      "categorie": "cinema"
     }
   ],
   "Users": [
-    {
-      "id": 4,
-      "username": "ee",
-      "email": "ee",
-      "role": "client",
-      "password": "20791756",
-      "connected": 0
-    },
-    {
-      "username": "aziz",
-      "email": "zaaz",
-      "role": "zaza",
-      "password": "20791756",
-      "connected": 0,
-      "id": 5
-    },
-    {
-      "username": "ahmed",
-      "email": "azizsahnoun5@gmail.com",
-      "role": "azaaz",
-      "password": "20791756",
-      "connected": 0,
-      "id": 6
-    },
     {
       "username": "aziz55",
       "email": "azizsahnoun5@gmail.com",
       "role": "zz",
       "password": "20791756",
-      "connected": 0,
+      "connected": 1,
       "id": 7
     },
     {
-      "username": "lol",
+      "username": "test",
       "email": "azizsahnoun5@gmail.com",
       "password": "20791756",
       "connected": 0,
       "id": 8
+    }
+  ],
+  "Participation": [
+    {
+      "id": 1,
+      "nom": "ezaea",
+      "type": "Education"
+    },
+    {
+      "id": 2,
+      "nom": 1,
+      "type": 7
     }
   ]
 }
