@@ -16,10 +16,66 @@
       "id": 1,
       "nom": "ahmed",
       "date": "2020-12-07T23:00:00.000Z",
-      "places": "20",
+      "places": 18,
       "description": "555",
       "image": "C:\\fakepath\\870x489_theatre.jpg",
+      "categorie": "cinema",
+      "dis": 10
+    },
+    {
+      "id": 2,
+      "nom": "test0",
+      "date": "2020-12-16T23:00:00.000Z",
+      "places": "0",
+      "description": "jjj",
+      "image": "C:\\fakepath\\white.jpg",
       "categorie": "cinema"
+    },
+    {
+      "id": 3,
+      "nom": "even 5",
+      "date": "2020-12-16T23:00:00.000Z",
+      "places": "55",
+      "description": "eeeeeeeeee",
+      "image": "C:\\fakepath\\back.jpg",
+      "categorie": "cinema"
+    },
+    {
+      "id": 4,
+      "nom": "test4",
+      "date": "2020-12-18T23:00:00.000Z",
+      "places": "55",
+      "description": "eeee",
+      "image": "C:\\fakepath\\white.jpg",
+      "categorie": "cinema"
+    },
+    {
+      "id": 5,
+      "nom": "lastis",
+      "date": "2020-12-16T23:00:00.000Z",
+      "places": "77",
+      "description": "ee",
+      "image": "C:\\fakepath\\back.jpg",
+      "categorie": "cinema"
+    },
+    {
+      "id": 6,
+      "nom": "match amicale",
+      "date": "2020-12-09T23:00:00.000Z",
+      "places": "500",
+      "description": "avec reervation",
+      "image": "C:\\fakepath\\stade-de-sousse.jpg",
+      "categorie": "foot"
+    },
+    {
+      "id": 7,
+      "nom": "ngs",
+      "date": "2020-12-22T23:00:00.000Z",
+      "places": 2,
+      "description": "lol",
+      "image": "C:\\fakepath\\festival-carthage-040320-1.jpg",
+      "categorie": "cinema",
+      "dis": 10
     }
   ],
   "Users": [
@@ -28,7 +84,7 @@
       "email": "azizsahnoun5@gmail.com",
       "role": "zz",
       "password": "20791756",
-      "connected": 1,
+      "connected": 0,
       "id": 7
     },
     {
@@ -37,6 +93,20 @@
       "password": "20791756",
       "connected": 0,
       "id": 8
+    },
+    {
+      "username": "valid",
+      "email": "azizsahnoun5@gmail.com",
+      "password": "123456789",
+      "connected": 0,
+      "id": 9
+    },
+    {
+      "username": "walid",
+      "email": "azizsahnoun5@gmail.com",
+      "password": "20791756",
+      "connected": 0,
+      "id": 10
     }
   ],
   "Participation": [

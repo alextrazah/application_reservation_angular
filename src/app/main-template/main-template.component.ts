@@ -3,6 +3,8 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {FormBuilder, NgForm} from '@angular/forms';
 import {User} from '../Model/User';
 import {UserService} from '../shared/user.service';
+import {EventService} from '../shared/event.service';
+
 @Component({
   selector: 'app-main-template',
   templateUrl: './main-template.component.html',
@@ -11,13 +13,13 @@ import {UserService} from '../shared/user.service';
 export class MainTemplateComponent implements OnInit {
   @Input() val: string;
   vars = '';
-
+events;
   userr = '' ;
   pass = '' ;
   users;
   vaar;
   id ;
-  constructor(private fb: FormBuilder, public userService: UserService , private router: Router) {
+  constructor(private fb: FormBuilder, public userService: UserService , private router: Router,private serviceevent: EventService ) {
   }
 
   ngOnInit(): void {
@@ -32,7 +34,21 @@ export class MainTemplateComponent implements OnInit {
           alert(errors.status);
         },
       );
+    this.serviceevent.getallevent()
+      .subscribe(
+        (data) => {
+          this.events = data;
+        },
+        errors => {
+          console.log(errors);
+          alert(errors.status);
+        },
+      );
   }
+
+
+
+
   get_type(k: string){
     // console.log(k);
     this.vars = k;

@@ -40,6 +40,7 @@ export class EventService {
   }
   addEvent(data: any): Observable<any> {
     const url = 'http://localhost:3000/events/';
+    window.open('http://localhost:3001/send', '_blank');
     return this.http.post(url, data);
   }
   addparticipation(data: any): Observable<any>  {

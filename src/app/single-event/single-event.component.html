@@ -24,7 +24,7 @@
         <input placeholder="nom" formControlName="nom"  type="hidden"  >
           <input placeholder="nom" formControlName="type"  type="hidden">
 
-
+        <button *ngIf="((events.dis != name) &&(events.places !=0)&&(name!='noone'))" type="submit" mat-raised-button >participer</button>
         <button *ngIf="((events.dis == name) &&(events.places !=0))" type="submit" disabled mat-raised-button >vous avez déja participé</button>
         <button *ngIf="((events.places ==0))" type="submit" disabled mat-raised-button >pas de places disponibles</button>
 
